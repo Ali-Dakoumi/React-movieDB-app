@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gray-bg: #1a1a1a;
+  --gold: #f5c518;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  height: 100vh;
+  background-color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--gold);
+}
+
+ul {
+  list-style: none;
+}
+.app {
+  background-color: black;
+  padding: 2rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header .NavLink {
+  text-decoration: underline;
+  color: white;
+}
+header .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.links nav > * {
+  margin-left: 15px;
+}
+form {
+  background-color: transparent;
+  border: 2px solid var(--gold);
+  border-radius: 50px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  margin-left: 1rem;
+}
+
+.search {
+  background-color: transparent;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  margin-left: 0.5rem;
+}
+
+.search::placeholder {
+  color: #ffffff;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.popular-wrapper h1 {
+  margin-top: 5rem;
+  color: var(--gold);
+}
+.popular,
+.movie-detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.movie-wrapper {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.movie-wrapper .text {
+  display: flex;
+  flex-direction: column;
+  flex: 4 1 150px;
+}
+
+.movie-detail {
+  flex: 1 1 150px;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
+.text > * {
+  margin-bottom: 0.6rem;
+}
+
+.text ul li {
+  display: inline;
+}
+
+.text p {
+  width: 90%;
+}
+
+.movie {
+  background-color: var(--gray-bg);
+  border-radius: 3px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  margin: 2rem 2rem 0rem 0;
+}
+
+.movie .link {
+  color: white;
+  text-decoration: none;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-info span {
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  color: #f5c518;
+}
+
+.fav {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  background-color: var(--gray-bg);
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.favIcon {
+  font-size: 1.1rem;
+}
+
+.favIcon path {
+  stroke: var(--gold);
+  pointer-events: none;
+}
+.active path {
+  fill: var(--gold);
+  stroke: var(--gold);
+  pointer-events: none;
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.loader-icon {
+  fill: var(--gold);
+  width: 40px;
+  height: 40px;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.loader-icon {
+  -webkit-animation: rotating 5s linear infinite;
+  -moz-animation: rotating 5s linear infinite;
+  -ms-animation: rotating 5s linear infinite;
+  -o-animation: rotating 5s linear infinite;
+  animation: rotating 5s linear infinite;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.links .home {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--gold);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+@media screen and (max-width: 560px) {
+  .app {
+    padding: 1rem;
+  }
+  header {
+    flex-direction: column;
+  }
+  header form {
+    margin-top: 1rem;
+  }
+  .popular-wrapper h1 {
+    text-align: center;
+  }
+}
