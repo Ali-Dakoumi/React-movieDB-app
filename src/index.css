@@ -255,7 +255,7 @@ form {
   color: var(--gold);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 660px) {
   .app {
     padding: 1rem;
   }
