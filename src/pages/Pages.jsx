@@ -74,7 +74,7 @@ const Pages = () => {
     <div>
       <Routes>
         <Route
-          path="/react-movie-app"
+          path="/React-movieDB-app/"
           element={
             <Home
               movies={movies}

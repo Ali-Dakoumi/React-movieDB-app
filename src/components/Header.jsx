@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header>
       <div className="links">
-        <NavLink className="NavLink home" to="/react-movie-app">
+        <NavLink className="NavLink home" to="/React-movieDB-app/">
           MovieDB
         </NavLink>
         <nav>
