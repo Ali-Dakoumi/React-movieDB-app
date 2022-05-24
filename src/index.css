@@ -109,10 +109,10 @@ form {
 .movie-wrapper .text {
   display: flex;
   flex-direction: column;
-  flex: 4 1 150px;
+  flex: 4 1 300px;
 }
 
-.movie-detail {
+.movie-wrapper .movie {
   flex: 1 1 150px;
   justify-self: flex-end;
   align-self: flex-end;
